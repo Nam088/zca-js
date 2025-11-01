@@ -1,6 +1,6 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import type { AttachmentSource } from "../models/index.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import type { AttachmentSource } from "../models/index";
+import { apiFactory } from "../utils";
 
 export type CreateGroupResponse = {
     groupType: number;

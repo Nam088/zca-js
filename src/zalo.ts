@@ -1,13 +1,13 @@
-import { loginQR, LoginQRCallbackEventType, type LoginQRCallback } from "./apis/loginQR.js";
-import { getServerInfo, login } from "./apis/login.js";
-import { createContext, isContextSession, type ContextBase, type Options } from "./context.js";
-import { generateZaloUUID, logger } from "./utils.js";
+import { loginQR, LoginQRCallbackEventType, type LoginQRCallback } from "./apis/loginQR";
+import { getServerInfo, login } from "./apis/login";
+import { createContext, isContextSession, type ContextBase, type Options } from "./context";
+import { generateZaloUUID, logger } from "./utils";
 
 import toughCookie from "tough-cookie";
 
-import { ZaloApiError } from "./Errors/ZaloApiError.js";
-import { checkUpdate } from "./update.js";
-import { API } from "./apis.js";
+import { ZaloApiError } from "./Errors/ZaloApiError";
+import { checkUpdate } from "./update";
+import { API } from "./apis";
 
 export type Cookie = {
     domain: string;

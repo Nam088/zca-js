@@ -1,14 +1,14 @@
 import EventEmitter from "events";
 import WebSocket from "ws";
-import { type FriendEvent, initializeFriendEvent, type TFriendEvent } from "../models/FriendEvent.js";
-import { type GroupEvent, initializeGroupEvent, type TGroupEvent } from "../models/GroupEvent.js";
-import type { Message, TGroupMessage, TMessage, TReaction, Typing } from "../models/index.js";
-import { GroupMessage, UserMessage, Reaction, Undo, ThreadType, GroupTyping, UserTyping } from "../models/index.js";
-import { decodeEventData, getFriendEventType, getGroupEventType, hasOwn, logger, makeURL } from "../utils.js";
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import type { ContextSession } from "../context.js";
-import { type SeenMessage, GroupSeenMessage, UserSeenMessage } from "../models/SeenMessage.js";
-import { type DeliveredMessage, UserDeliveredMessage, GroupDeliveredMessage } from "../models/DeliveredMessage.js";
+import { type FriendEvent, initializeFriendEvent, type TFriendEvent } from "../models/FriendEvent";
+import { type GroupEvent, initializeGroupEvent, type TGroupEvent } from "../models/GroupEvent";
+import type { Message, TGroupMessage, TMessage, TReaction, Typing } from "../models/index";
+import { GroupMessage, UserMessage, Reaction, Undo, ThreadType, GroupTyping, UserTyping } from "../models/index";
+import { decodeEventData, getFriendEventType, getGroupEventType, hasOwn, logger, makeURL } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import type { ContextSession } from "../context";
+import { type SeenMessage, GroupSeenMessage, UserSeenMessage } from "../models/SeenMessage";
+import { type DeliveredMessage, UserDeliveredMessage, GroupDeliveredMessage } from "../models/DeliveredMessage";
 
 type UploadEventData = {
     fileUrl: string;
@@ -75,7 +75,7 @@ export class Listener extends EventEmitter<ListenerEvents> {
     private cipherKey?: string;
 
     private selfListen;
-    private pingInterval?: Timer;
+    private pingInterval?: ReturnType<typeof setInterval>;
 
     private id = 0;
 

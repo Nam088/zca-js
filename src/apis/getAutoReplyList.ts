@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { apiFactory } from "../utils";
 
-import type { AutoReplyItem } from "../models/index.js";
+import type { AutoReplyItem } from "../models/index";
 
 export type GetAutoReplyListResponse = {
     item: AutoReplyItem[];

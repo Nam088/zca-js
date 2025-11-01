@@ -1,5 +1,5 @@
-import type { GroupSetting, GroupTopic } from "./Group.js";
-import type { ReminderGroup } from "./Reminder.js";
+import type { GroupSetting, GroupTopic } from "./Group";
+import type { ReminderGroup } from "./Reminder";
 
 export enum GroupEventType {
     JOIN_REQUEST = "join_request",

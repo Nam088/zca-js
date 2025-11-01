@@ -1,4 +1,4 @@
-import { apiFactory } from "../utils.js";
+import { apiFactory } from "../utils";
 
 export const getCookieFactory = apiFactory()((_, ctx) => {
     /**

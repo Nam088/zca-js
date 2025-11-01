@@ -1,8 +1,8 @@
 import FormData from "form-data";
 import fs from "node:fs";
-import type { UploadCallback } from "../context.js";
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { ThreadType, type AttachmentSource } from "../models/index.js";
+import type { UploadCallback } from "../context";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { ThreadType, type AttachmentSource } from "../models/index";
 import {
     apiFactory,
     getFileExtension,

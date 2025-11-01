@@ -1,4 +1,4 @@
-import { apiFactory } from "../utils.js";
+import { apiFactory } from "../utils";
 
 export type GetAllGroupsResponse = {
     version: string;

@@ -1,7 +1,7 @@
 import FormData from "form-data";
 import fs from "node:fs/promises";
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { ThreadType, type TMessage, type AttachmentSource } from "../models/index.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { ThreadType, type TMessage, type AttachmentSource } from "../models/index";
 import {
     apiFactory,
     getClientMessageType,

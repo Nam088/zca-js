@@ -1,6 +1,6 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import type { Gender, ZBusinessPackage } from "../models/index.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import type { Gender, ZBusinessPackage } from "../models/index";
+import { apiFactory } from "../utils";
 
 export type FindUserResponse = {
     avatar: string;

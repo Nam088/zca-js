@@ -1,5 +1,5 @@
-import { type ContextSession } from "../context.js";
-import { apiFactory, type FactoryUtils } from "../utils.js";
+import { type ContextSession } from "../context";
+import { apiFactory, type FactoryUtils } from "../utils";
 
 export type CustomAPIProps<T, K> = { ctx: ContextSession; utils: FactoryUtils<T>; props: K };
 export type CustomAPICallback<T, K> = (props: CustomAPIProps<T, K>) => T | Promise<T>;

@@ -1,11 +1,11 @@
 import { CookieJar, type SerializedCookie, type SerializedCookieJar } from "tough-cookie";
 
 import { writeFile } from "node:fs/promises";
-import type { ContextBase } from "../context.js";
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { logger, request } from "../utils.js";
-import { ZaloApiLoginQRAborted } from "../Errors/ZaloApiLoginQRAborted.js";
-import { ZaloApiLoginQRDeclined } from "../Errors/ZaloApiLoginQRDeclined.js";
+import type { ContextBase } from "../context";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { logger, request } from "../utils";
+import { ZaloApiLoginQRAborted } from "../Errors/ZaloApiLoginQRAborted";
+import { ZaloApiLoginQRDeclined } from "../Errors/ZaloApiLoginQRDeclined";
 
 export enum LoginQRCallbackEventType {
     QRCodeGenerated,
@@ -387,7 +387,7 @@ export async function loginQR(
         // eslint-disable-next-line
     } | null>(async (resolve, reject) => {
         const controller = new AbortController();
-        let qrTimeout: NodeJS.Timer | null = null;
+        let qrTimeout: ReturnType<typeof setTimeout> | null = null;
 
         function cleanUp() {
             controller.abort();
@@ -482,7 +482,7 @@ export async function loginQR(
             const confirmResult = await waitingConfirm(ctx, loginVersion, qrGenResult.data.code, controller.signal);
             if (!confirmResult) throw new ZaloApiError("Cannot get confirm result");
 
-            clearTimeout(qrTimeout);
+            if (qrTimeout) clearTimeout(qrTimeout);
 
             if (confirmResult.error_code == -13) {
                 if (callback) {

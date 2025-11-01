@@ -1,6 +1,6 @@
 import { compare } from "semver";
-import { isBun, logger } from "./utils.js";
-import type { ContextBase } from "./context.js";
+import { isBun, logger } from "./utils";
+import type { ContextBase } from "./context";
 
 const VERSION = "2.0.4";
 const NPM_REGISTRY = "https://registry.npmjs.org/zca-js";

@@ -1,5 +1,5 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { apiFactory, resolveResponse } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { apiFactory, resolveResponse } from "../utils";
 
 export type StickerDetail = {
     id: number;

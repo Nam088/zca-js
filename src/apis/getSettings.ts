@@ -1,6 +1,6 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import type { UserSetting } from "../models/index.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import type { UserSetting } from "../models/index";
+import { apiFactory } from "../utils";
 
 export type GetSettingsResponse = UserSetting;
 

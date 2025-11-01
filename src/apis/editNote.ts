@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { apiFactory } from "../utils";
 
-import type { NoteDetail } from "../models/index.js";
+import type { NoteDetail } from "../models/index";
 
 export type EditNoteOptions = {
     /**

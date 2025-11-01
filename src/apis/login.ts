@@ -1,6 +1,6 @@
-import type { ContextBase } from "../context.js";
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { decryptResp, getSignKey, logger, makeURL, ParamsEncryptor, request } from "../utils.js";
+import type { ContextBase } from "../context";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { decryptResp, getSignKey, logger, makeURL, ParamsEncryptor, request } from "../utils";
 
 export async function login(ctx: ContextBase, encryptParams: boolean) {
     const encryptedParams = await getEncryptParam(ctx, encryptParams, "getlogininfo");

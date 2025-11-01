@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { apiFactory } from "../utils";
 
-import type { AttachmentSource, ProductCatalogItem } from "../models/index.js";
+import type { AttachmentSource, ProductCatalogItem } from "../models/index";
 
 export type CreateProductCatalogPayload = {
     catalogId: string;

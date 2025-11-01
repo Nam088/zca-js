@@ -1,5 +1,5 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { apiFactory } from "../utils";
 
 export type ReviewPendingMemberRequestPayload = {
     members: string | string[];

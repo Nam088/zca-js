@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { apiFactory } from "../utils";
 
-import type { PollDetail } from "../models/index.js";
+import type { PollDetail } from "../models/index";
 
 /**
  * Options for creating a poll.

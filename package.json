@@ -1,34 +1,25 @@
 {
     "name": "zca-js",
-    "version": "2.0.5",
+    "version": "2.0.4",
     "description": "Unofficial Zalo API for JavaScript",
-    "main": "dist/index.js",
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
     "type": "module",
     "exports": {
         ".": {
-            "require": "./dist/cjs/index.cjs",
-            "types": "./index.d.ts",
-            "default": "./dist/index.js"
+            "types": "./dist/index.d.ts",
+            "require": "./dist/index.cjs",
+            "import": "./dist/index.js"
         }
     },
     "scripts": {
-        "prebuild": "bun run scripts/buildAPI.js",
-        "build:clean": "rimraf dist",
-        "build:esm": "tsc",
-        "build:cjs": "rollup -c rollup.config.js",
-        "build": "bun run build:clean && bun run build:esm && bun run build:cjs",
+        "build": "tsup",
         "test:feat": "bun run test/feat.ts",
         "prettier": "prettier --write .",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
-        "prepare": "husky",
-        "prepublishOnly": "bun run lint && bun run build",
-        "version": "bun run prettier && git add -A",
-        "postversion": "git push && git push --tags",
-        "release:patch": "npm version patch && npm publish",
-        "release:minor": "npm version minor && npm publish",
-        "release:major": "npm version major && npm publish",
-        "release": "npm publish"
+        "prepare": "husky"
     },
     "repository": {
         "type": "git",
@@ -60,7 +51,6 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.34.0",
-        "@rollup/plugin-typescript": "^12.1.0",
         "@types/bun": "^1.1.14",
         "@types/crypto-js": "^4.2.2",
         "@types/json-bigint": "^1.0.4",
@@ -75,7 +65,7 @@
         "lint-staged": "^16.1.5",
         "prettier": "^3.3.3",
         "rimraf": "^5.0.10",
-        "rollup": "^4.24.0",
+        "tsup": "^8.5.0",
         "typescript": "^5.5.3",
         "typescript-eslint": "^8.41.0"
     },

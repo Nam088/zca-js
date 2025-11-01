@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import { apiFactory } from "../utils";
 
-import type { LabelData } from "../models/index.js";
+import type { LabelData } from "../models/index";
 
 export type GetLabelsResponse = {
     labelData: LabelData[];

@@ -1,6 +1,6 @@
-import { apiFactory } from "../utils.js";
+import { apiFactory } from "../utils";
 
-import type { User } from "../models/index.js";
+import type { User } from "../models/index";
 
 export type FetchAccountInfoResponse = User;
 

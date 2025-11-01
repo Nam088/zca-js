@@ -1,5 +1,5 @@
-import type { Gender } from "./Enum.js";
-import type { ZBusinessPackage } from "./ZBusiness.js";
+import type { Gender } from "./Enum";
+import type { ZBusinessPackage } from "./ZBusiness";
 
 export type User = {
     userId: string;

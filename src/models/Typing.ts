@@ -1,4 +1,4 @@
-import { ThreadType } from "./Enum.js";
+import { ThreadType } from "./Enum";
 
 export type TTyping = {
     uid: string;

@@ -1,6 +1,6 @@
-import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import type { BusinessCategory } from "../models/index.js";
-import { apiFactory } from "../utils.js";
+import { ZaloApiError } from "../Errors/ZaloApiError";
+import type { BusinessCategory } from "../models/index";
+import { apiFactory } from "../utils";
 
 export type GetBizAccountResponse = {
     biz?: {
