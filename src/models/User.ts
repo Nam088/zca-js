@@ -1,5 +1,5 @@
-import type { Gender } from "./Enum";
-import type { ZBusinessPackage } from "./ZBusiness";
+import type { Gender } from "./Enum.js";
+import type { ZBusinessPackage } from "./ZBusiness.js";
 
 export type User = {
     userId: string;
@@ -32,6 +32,20 @@ export type User = {
     bizPkg: ZBusinessPackage;
     createdTs: number;
     oa_status: unknown;
+};
+
+export type UserBasic = {
+    avatar: string;
+    cover: string;
+    status: string;
+    gender: Gender;
+    dob: number;
+    sdob: string;
+    globalId: string;
+    bizPkg: ZBusinessPackage;
+    uid: string;
+    zalo_name: string;
+    display_name: string;
 };
 
 export type UserSetting = {

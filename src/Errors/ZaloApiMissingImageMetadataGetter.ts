@@ -1,4 +1,4 @@
-import { ZaloApiError } from "./ZaloApiError";
+import { ZaloApiError } from "./ZaloApiError.js";
 
 export class ZaloApiMissingImageMetadataGetter extends ZaloApiError {
     constructor() {

@@ -1,6 +1,6 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import type { ZBusinessPackage } from "../models/ZBusiness";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import type { ZBusinessPackage } from "../models/ZBusiness.js";
+import { apiFactory } from "../utils.js";
 
 export type SentFriendRequestInfo = {
     userId: string;

@@ -1,6 +1,6 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import { DestType, ThreadType } from "../models/index";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import { DestType, ThreadType } from "../models/index.js";
+import { apiFactory } from "../utils.js";
 
 export type SendTypingEventResponse = {
     status: number;

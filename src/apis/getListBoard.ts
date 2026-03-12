@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import type { NoteDetail, PinnedMessageDetail, PollDetail } from "../models/index";
-import { BoardType } from "../models/index";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import type { NoteDetail, PinnedMessageDetail, PollDetail } from "../models/index.js";
+import { BoardType } from "../models/index.js";
+import { apiFactory } from "../utils.js";
 
 export type ListBoardOptions = {
     /**

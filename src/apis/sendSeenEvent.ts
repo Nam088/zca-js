@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import { MAX_MESSAGES_PER_SEND } from "../context";
-import { ThreadType } from "../models/index";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import { MAX_MESSAGES_PER_SEND } from "../context.js";
+import { ThreadType } from "../models/index.js";
+import { apiFactory } from "../utils.js";
 
 export type SendSeenEventResponse = {
     status: number;

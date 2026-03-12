@@ -1,8 +1,8 @@
 import FormData from "form-data";
 import fs from "node:fs";
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import type { AttachmentSource } from "../models/index";
-import { apiFactory, formatTime, getImageMetaData } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import type { AttachmentSource } from "../models/index.js";
+import { apiFactory, formatTime, getImageMetaData } from "../utils.js";
 
 export type ChangeAccountAvatarResponse = "";
 

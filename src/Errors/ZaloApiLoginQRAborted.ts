@@ -1,4 +1,4 @@
-import { ZaloApiError } from "./ZaloApiError";
+import { ZaloApiError } from "./ZaloApiError.js";
 
 export class ZaloApiLoginQRAborted extends ZaloApiError {
     constructor(message: string = "Operation aborted") {

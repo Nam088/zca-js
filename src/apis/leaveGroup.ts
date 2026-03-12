@@ -1,5 +1,5 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import { apiFactory } from "../utils.js";
 
 export type LeaveGroupResponse = {
     memberError: unknown[];

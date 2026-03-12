@@ -1,11 +1,11 @@
 import { CookieJar, type SerializedCookie, type SerializedCookieJar } from "tough-cookie";
 
 import { writeFile } from "node:fs/promises";
-import type { ContextBase } from "../context";
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import { logger, request } from "../utils";
-import { ZaloApiLoginQRAborted } from "../Errors/ZaloApiLoginQRAborted";
-import { ZaloApiLoginQRDeclined } from "../Errors/ZaloApiLoginQRDeclined";
+import type { ContextBase } from "../context.js";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import { logger, request } from "../utils.js";
+import { ZaloApiLoginQRAborted } from "../Errors/ZaloApiLoginQRAborted.js";
+import { ZaloApiLoginQRDeclined } from "../Errors/ZaloApiLoginQRDeclined.js";
 
 export enum LoginQRCallbackEventType {
     QRCodeGenerated,
@@ -25,6 +25,7 @@ export type LoginQRCallbackEvent =
                   enabledCheckOCR: boolean;
                   enabledMultiLayer: boolean;
               };
+              token: string;
           };
           actions: {
               saveToFile: (qrPath?: string) => Promise<unknown>;
@@ -168,6 +169,7 @@ async function generate(
             enabledCheckOCR: boolean;
             enabledMultiLayer: boolean;
         };
+        token: string;
     } | null;
     error_code: number;
     error_message: string;

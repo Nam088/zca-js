@@ -7,12 +7,12 @@ import SparkMD5 from "spark-md5";
 import toughCookie from "tough-cookie";
 import JSONBig from "json-bigint";
 
-import { isContextSession, type ContextSession, type ContextBase } from "./context";
-import { ZaloApiError, ZaloApiMissingImageMetadataGetter } from "./Errors/index";
-import { FriendEventType } from "./models/FriendEvent";
-import { GroupEventType } from "./models/GroupEvent";
-import type { API } from "./zalo";
-import type { AttachmentSource } from "./models/Attachment";
+import { isContextSession, type ContextSession, type ContextBase } from "./context.js";
+import { ZaloApiError, ZaloApiMissingImageMetadataGetter } from "./Errors/index.js";
+import { FriendEventType } from "./models/FriendEvent.js";
+import { GroupEventType } from "./models/GroupEvent.js";
+import type { API } from "./zalo.js";
+import type { AttachmentSource } from "./models/Attachment.js";
 
 export const isBun = typeof (globalThis as Record<string, unknown>).Bun !== "undefined";
 

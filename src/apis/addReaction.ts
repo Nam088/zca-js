@@ -1,6 +1,6 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import { ThreadType, Reactions } from "../models/index";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import { ThreadType, Reactions } from "../models/index.js";
+import { apiFactory } from "../utils.js";
 
 export type AddReactionResponse = {
     msgIds: number[];

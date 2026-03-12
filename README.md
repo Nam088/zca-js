@@ -43,7 +43,7 @@ bun add sharp # or npm install sharp
 ```javascript
 import { Zalo } from "zca-js";
 import sharp from "sharp";
-import fs from "fs";
+import fs from "node:fs";
 
 async function imageMetadataGetter(filePath) {
     const data = await fs.promises.readFile(filePath);
@@ -64,7 +64,7 @@ const zalo = new Zalo({
 
 ## Documentation
 
-See [API Documentation](https://tdung.gitbook.io/zca-js) for more details.
+See [API Documentation](https://zca-js.tdung.com) for more details.
 
 ---
 

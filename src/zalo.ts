@@ -1,13 +1,13 @@
-import { loginQR, LoginQRCallbackEventType, type LoginQRCallback } from "./apis/loginQR";
-import { getServerInfo, login } from "./apis/login";
-import { createContext, isContextSession, type ContextBase, type Options } from "./context";
-import { generateZaloUUID, logger } from "./utils";
+import { loginQR, LoginQRCallbackEventType, type LoginQRCallback } from "./apis/loginQR.js";
+import { getServerInfo, login } from "./apis/login.js";
+import { createContext, isContextSession, type ContextBase, type Options } from "./context.js";
+import { generateZaloUUID, logger } from "./utils.js";
 
 import toughCookie from "tough-cookie";
 
-import { ZaloApiError } from "./Errors/ZaloApiError";
-import { checkUpdate } from "./update";
-import { API } from "./apis";
+import { ZaloApiError } from "./Errors/ZaloApiError.js";
+import { checkUpdate } from "./update.js";
+import { API } from "./apis.js";
 
 export type Cookie = {
     domain: string;
@@ -45,13 +45,15 @@ export class Zalo {
         const jar = new toughCookie.CookieJar();
         for (const each of cookieArr) {
             try {
-                jar.setCookieSync(
-                    toughCookie.Cookie.fromJSON({
-                        ...each,
-                        key: (each as toughCookie.SerializedCookie).key || each.name,
-                    }) ?? "",
-                    "https://chat.zalo.me",
-                );
+                const cookieObj = toughCookie.Cookie.fromJSON({
+                    ...each,
+                    key: (each as toughCookie.SerializedCookie).key || each.name,
+                });
+                if (cookieObj) {
+                    const domain = cookieObj.domain || "chat.zalo.me";
+                    const url = `https://${domain.startsWith(".") ? domain.slice(1) : domain}`;
+                    jar.setCookieSync(cookieObj, url);
+                }
             } catch (error: unknown) {
                 logger({
                     options: {

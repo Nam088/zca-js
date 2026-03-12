@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import type { BinBankCard } from "../models/index";
-import { ThreadType } from "../models/index";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import type { BinBankCard } from "../models/index.js";
+import { ThreadType } from "../models/index.js";
+import { apiFactory } from "../utils.js";
 
 export type SendBankCardPayload = {
     binBank: BinBankCard;

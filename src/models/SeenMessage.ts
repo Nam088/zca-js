@@ -1,4 +1,4 @@
-import { ThreadType } from "./Enum";
+import { ThreadType } from "./Enum.js";
 
 export type TUserSeenMessage = {
     idTo: string;

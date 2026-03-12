@@ -1,6 +1,6 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import type { PollOptions } from "../models/index";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import type { PollOptions } from "../models/index.js";
+import { apiFactory } from "../utils.js";
 
 export type VotePollResponse = {
     options: PollOptions[];

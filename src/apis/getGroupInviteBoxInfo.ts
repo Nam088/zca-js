@@ -1,7 +1,7 @@
-import { ZaloApiError } from "../Errors/ZaloApiError";
-import { apiFactory } from "../utils";
+import { ZaloApiError } from "../Errors/ZaloApiError.js";
+import { apiFactory } from "../utils.js";
 
-import type { GroupInfo, GroupTopic } from "../models/index";
+import type { GroupInfo, GroupTopic } from "../models/index.js";
 
 export type GetGroupInviteBoxInfoPayload = {
     groupId: string;
