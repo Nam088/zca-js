@@ -1,6 +1,6 @@
 {
   "name": "@nam088/zca-js",
-  "version": "3.2.0",
+  "version": "3.1.0",
   "description": "Unofficial Zalo API for JavaScript",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
