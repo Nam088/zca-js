@@ -69,8 +69,8 @@ jobs:
       - name: Build
         run: npm run build --if-present
 
-      - name: Check tags vs branch history
-        run: node scripts/check-release-tags.mjs
+      - name: Repair orphan release tags
+        run: node scripts/repair-release-tags.mjs
 
       - name: Semantic Release
         env:
