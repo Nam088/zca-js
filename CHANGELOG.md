@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/Nam088/zca-js/compare/v3.1.1...v3.1.2) (2026-05-03)
+
+
+### Bug Fixes
+
+* **api:** expose addReaction on API class ([c581042](https://github.com/Nam088/zca-js/commit/c581042255fcb697790def20c45b174753c5b654))
+
 ## [3.1.1](https://github.com/Nam088/zca-js/compare/v3.1.0...v3.1.1) (2026-05-03)
 
 
