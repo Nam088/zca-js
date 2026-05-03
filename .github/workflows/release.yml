@@ -54,7 +54,7 @@ jobs:
           fetch-tags: true
 
       - name: Sync git tags
-        run: git fetch --tags --force origin
+        run: git fetch origin '+refs/tags/*:refs/tags/*' --prune
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -68,6 +68,9 @@ jobs:
 
       - name: Build
         run: npm run build --if-present
+
+      - name: Check tags vs branch history
+        run: node scripts/check-release-tags.mjs
 
       - name: Semantic Release
         env:
