@@ -43,7 +43,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      workflows: write
       issues: write
       pull-requests: write
       id-token: write
@@ -53,6 +52,8 @@ jobs:
         with:
           fetch-depth: 0
           fetch-tags: true
+          # Optional PAT (fine-grained: Contents write + Workflows). GITHUB_TOKEN cannot push tags that point at commits touching .github/workflows/.
+          token: ${{ secrets.RELEASE_BOT_PAT || github.token }}
 
       - name: Sync git tags
         run: git fetch origin '+refs/tags/*:refs/tags/*' --prune
@@ -75,6 +76,6 @@ jobs:
 
       - name: Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_BOT_PAT || secrets.GITHUB_TOKEN }}
           HUSKY: 0
         run: npx semantic-release
