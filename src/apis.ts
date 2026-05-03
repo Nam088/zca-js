@@ -4,6 +4,7 @@ import type { ZPWServiceMap, ContextSession } from "./context.js";
 import { acceptFriendRequestFactory } from "./apis/acceptFriendRequest.js";
 import { addGroupDeputyFactory } from "./apis/addGroupDeputy.js";
 import { addPollOptionsFactory } from "./apis/addPollOptions.js";
+import { addReactionFactory } from "./apis/addReaction.js";
 import { addUserToGroupFactory } from "./apis/addUserToGroup.js";
 import { blockUserFactory } from "./apis/blockUser.js";
 import { blockViewFeedFactory } from "./apis/blockViewFeed.js";
@@ -138,6 +139,7 @@ export class API {
     public acceptFriendRequest: ReturnType<typeof acceptFriendRequestFactory>;
     public addGroupDeputy: ReturnType<typeof addGroupDeputyFactory>;
     public addPollOptions: ReturnType<typeof addPollOptionsFactory>;
+    public addReaction: ReturnType<typeof addReactionFactory>;
     public addUserToGroup: ReturnType<typeof addUserToGroupFactory>;
     public blockUser: ReturnType<typeof blockUserFactory>;
     public blockViewFeed: ReturnType<typeof blockViewFeedFactory>;
@@ -273,6 +275,7 @@ export class API {
         this.acceptFriendRequest = acceptFriendRequestFactory(ctx, this);
         this.addGroupDeputy = addGroupDeputyFactory(ctx, this);
         this.addPollOptions = addPollOptionsFactory(ctx, this);
+        this.addReaction = addReactionFactory(ctx, this);
         this.addUserToGroup = addUserToGroupFactory(ctx, this);
         this.blockUser = blockUserFactory(ctx, this);
         this.blockViewFeed = blockViewFeedFactory(ctx, this);
