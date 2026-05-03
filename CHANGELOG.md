@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/Nam088/zca-js/compare/v3.1.0...v3.1.1) (2026-05-03)
+
+
+### Bug Fixes
+
+* bump package version to 3.1.1 ([6225d97](https://github.com/Nam088/zca-js/commit/6225d978e3c05c05af4151d54e47df1c0da2c577))
+
 # [3.1.0](https://github.com/Nam088/zca-js/compare/v3.0.0...v3.1.0) (2026-05-03)
 
 
