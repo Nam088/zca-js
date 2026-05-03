@@ -1,6 +1,6 @@
 {
   "name": "@nam088/zca-js",
-  "version": "3.1.1",
+  "version": "3.1.0",
   "description": "Unofficial Zalo API for JavaScript",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -32,7 +32,11 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "keywords": ["chatbot", "zalo", "api"],
+  "keywords": [
+    "chatbot",
+    "zalo",
+    "api"
+  ],
   "author": "Nam088",
   "license": "MIT",
   "dependencies": {
