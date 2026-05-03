@@ -99,7 +99,7 @@ type AttachmentData =
     | {
           query?: Record<string, string>;
           fileType: "gif";
-          body: Buffer;
+          body: BodyInit;
           headers: Record<string, string>;
       };
 
@@ -262,7 +262,7 @@ export const sendMessageFactory = apiFactory()((api, ctx, utils) => {
             {
                 method: "POST",
                 headers: formData.getHeaders(),
-                body: formData.getBuffer(),
+                body: new Uint8Array(formData.getBuffer()),
             },
         );
 
@@ -577,7 +577,7 @@ export const sendMessageFactory = apiFactory()((api, ctx, utils) => {
                     params: encryptedParams,
                     type: "1",
                 },
-                body: formData.getBuffer(),
+                body: new Uint8Array(formData.getBuffer()),
                 headers: formData.getHeaders(),
                 fileType: "gif",
             });
